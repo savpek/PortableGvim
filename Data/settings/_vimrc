@@ -82,9 +82,6 @@ endif
 vnoremap < <gv
 vnoremap > >gv
 
-" TOOLS "
-" command CTags !expand($VIM)/ctags.exe -R %:p:h/*.py
-
 " PLUGIN SETTINGS "
 
 " Shortcuts
@@ -93,6 +90,7 @@ command SC SyntasticCheck
 autocmd BufEnter  *.py command! T Pytest file verbose " Python testrunner.
 autocmd BufLeave  *.py command! T NotInUse
 command CD cd %:p:h
+command CTags !\%VIMRUNTIME\%\ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
 " Pathogen
 call pathogen#infect()
@@ -109,3 +107,4 @@ let g:SuperTabMappingBackward = '<s-c-space>'
 " NerdTree settings.
 command NT NERDTreeToggle 
 let NERDTreeMapActivateNode='<CR>'
+
