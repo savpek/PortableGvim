@@ -44,9 +44,6 @@ set noswapfile
 " Save when change buffers.
 set autowrite
 
-" NOTICE! this may cause problems wit some plugins ...
-" set autochdir
-
 " Statusline settings, always show and formatting.
 set laststatus=2
 set statusline=%<%f%y\ %#warningmsg#%{fugitive#statusline()}%*\ \ \ %{getcwd()}%h%m%r%=%-14.(%l/%L,%c%V%)\ %P
@@ -86,8 +83,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " TOOLS "
-command CTags !$VIM/ctags.exe -R %:p:h/*.py
-set tags+=./tags,/
+" command CTags !expand($VIM)/ctags.exe -R %:p:h/*.py
+
 " PLUGIN SETTINGS "
 
 " Shortcuts
@@ -95,6 +92,7 @@ command TL TlistToggle
 command SC SyntasticCheck
 autocmd BufEnter  *.py command! T Pytest file verbose " Python testrunner.
 autocmd BufLeave  *.py command! T NotInUse
+command CD cd %:p:h
 
 " Pathogen
 call pathogen#infect()
@@ -111,4 +109,3 @@ let g:SuperTabMappingBackward = '<s-c-space>'
 " NerdTree settings.
 command NT NERDTreeToggle 
 let NERDTreeMapActivateNode='<CR>'
-
