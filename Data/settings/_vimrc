@@ -1,0 +1,114 @@
+" COMMON SETTINGS "
+" Vi is dead, long live for Vim.
+set nocompatible
+
+" Make backspace behave in a sane manner.
+set backspace=indent,eol,start
+
+" Switch syntax highlighting on
+syntax on
+
+" Enable file type detection and do language-dependent indenting.
+"Auto indent"
+set ai
+filetype plugin indent on
+
+" Enable 256 colors in terminal.
+set t_Co=256
+
+" Da best color scheme.
+colorscheme molokai
+
+" Set good font.
+set gfn=Lucida_Console:h9:cANSI
+
+" Language settings.
+set langmenu=en_US
+let $LANG = 'en_US'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+" Hide menuitems.
+set guioptions=
+
+" Don't close buffer when open new.
+set hidden
+
+" Bell thingies
+set noerrorbells
+
+" No those shitty swp files.
+set nobackup
+set noswapfile
+
+" Save when change buffers.
+set autowrite
+
+" NOTICE! this may cause problems wit some plugins ...
+" set autochdir
+
+" Statusline settings, always show and formatting.
+set laststatus=2
+set statusline=%<%f%y\ %#warningmsg#%{fugitive#statusline()}%*\ \ \ %{getcwd()}%h%m%r%=%-14.(%l/%L,%c%V%)\ %P
+
+" Make syntax highlighting faster on larger files ...
+set synmaxcol=120
+
+" Show linenumber as default.
+set number
+
+" Tab settigns and visualisation.
+set smarttab expandtab autoindent
+set tabstop=4 shiftwidth=4 softtabstop=4
+
+set list listchars=tab:\|·,trail:·,extends:»,precedes:«
+
+" Set filetype regonaciation on.
+filetype on
+
+" Highlight searched items.
+set hlsearch
+
+" Mappings for moving between viewports.
+map <C-Left> <C-w>h
+map <C-Right> <C-w>l
+map <C-Up> <C-w>k
+map <C-Down> <C-w>j
+
+" Change cursor shape based on current mode.
+if &term =~ '^xterm'
+    let &t_SI .= "\<Esc>[4 q"
+    let &t_EI .= "\<Esc>[2 q"
+endif
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" TOOLS "
+command CTags !$VIM/ctags.exe -R %:p:h/*.py
+set tags+=./tags,/
+" PLUGIN SETTINGS "
+
+" Shortcuts
+command TL TlistToggle
+command SC SyntasticCheck
+autocmd BufEnter  *.py command! T Pytest file verbose " Python testrunner.
+autocmd BufLeave  *.py command! T NotInUse
+
+" Pathogen
+call pathogen#infect()
+
+" Set syntastic passive, this because otherwise it will
+" slow evetyrhing down if things searched with grep (etc).
+let g:syntastic_mode_map = { 'mode': 'passive' }
+
+" Supertab settings.
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabMappingForward = '<c-space>'
+let g:SuperTabMappingBackward = '<s-c-space>'
+
+" NerdTree settings.
+command NT NERDTreeToggle 
+let NERDTreeMapActivateNode='<CR>'
+
