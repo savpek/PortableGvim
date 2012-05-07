@@ -8,20 +8,28 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Com
+~MSle0~/^" \a
+
+# Last Substitute Search Pattern:
+~MSle0&^\S
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
+:vs testi2.py
+:set readonly
+:readonly
+:ro
 :vs testi.py
-:q!
+:help readonly
 :q
-:1
-:wq!
-:colorscheme molokai
-:w
+:colorscheme wombat
 :wq
 :Gcommit -a
 :Gstatus
 :Git add *
+:w
 :help :let-environment
 :eservice_startup.py
 :vs
@@ -29,10 +37,10 @@
 :tag MeasurementResult
 :CD
 :tags
-:set tags?
-:set tags`
 
 # Search String History (newest to oldest):
+?/Comm
+?/LineN
 ?/Com
 ?/Line
 ?/comment
@@ -44,59 +52,46 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	250 
-"1	LINE	0
-	colorscheme solarized
-"2	LINE	0
-	set background=light
-"3	LINE	0
+"0	LINE	0
+	
+""1	LINE	0
 	let $PATH .=;
-"4	LINE	0
+"2	LINE	0
 	let $PATH .=$VIMRUNTIME
-"5	LINE	0
+"3	LINE	0
 	
-"6	LINE	0
+"4	LINE	0
 	" NOTICE! this may cause problems wit some plugins ...
-"7	LINE	0
+"5	LINE	0
 	" set autochdir
-"8	LINE	0
+"6	LINE	0
 	set tags+=./tags,/
-"9	LINE	0
+"7	LINE	0
 	
+"8	LINE	0
+	
+"9	LINE	0
+	Special	links to
 "-	CHAR	0
 	M
 
 # File marks:
-'0  1  0  D:\Dropbox\TOOLS\gVimPortable\testi.py
-'1  20  0  ~\_vimrc
-'2  21  19  ~\_vimrc
-'3  127  0  ~\vimfiles\colors\molokai.vim
-'4  21  20  ~\_vimrc
-'5  106  0  ~\_vimrc
-'6  12  22  D:\Dropbox\PYTHON\HMA\service_startup.py
-'7  4  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
-'8  3  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
-'9  21  13  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\tagsrch.txt
+'0  5382  10  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\options.txt
+'1  106  0  ~\_vimrc
+'2  12  22  D:\Dropbox\PYTHON\HMA\service_startup.py
+'3  4  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+'4  3  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+'5  21  13  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\tagsrch.txt
+'6  95  20  ~\_vimrc
+'7  3  0  D:\Dropbox\TOOLS\gVimPortable\testi.py
+'8  3  0  D:\Dropbox\TOOLS\gVimPortable\testi.py
+'9  3  0  D:\Dropbox\TOOLS\gVimPortable\testi.py
 
 # Jumplist (newest first):
--'  1  0  D:\Dropbox\TOOLS\gVimPortable\testi.py
--'  206  32  ~\vimfiles\colors\molokai.vim
--'  182  13  ~\vimfiles\colors\molokai.vim
--'  118  6  ~\vimfiles\colors\molokai.vim
--'  174  30  ~\vimfiles\colors\molokai.vim
--'  91  9  ~\vimfiles\colors\molokai.vim
--'  209  6  ~\vimfiles\colors\molokai.vim
--'  207  12  ~\vimfiles\colors\molokai.vim
--'  188  12  ~\vimfiles\colors\molokai.vim
--'  187  12  ~\vimfiles\colors\molokai.vim
--'  142  17  ~\vimfiles\colors\molokai.vim
--'  1  0  ~\vimfiles\colors\molokai.vim
--'  20  0  ~\_vimrc
--'  1  0  ~\_vimrc
--'  21  19  ~\_vimrc
--'  127  0  ~\vimfiles\colors\molokai.vim
+-'  5382  10  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\options.txt
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\options.txt
 -'  106  0  ~\_vimrc
+-'  1  0  ~\_vimrc
 -'  12  22  D:\Dropbox\PYTHON\HMA\service_startup.py
 -'  1  0  D:\Dropbox\PYTHON\HMA\service_startup.py
 -'  11  0  D:\Dropbox\PYTHON\HMA\__Tag_List__
@@ -146,7 +141,39 @@
 -'  3  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
 -'  69  39  ~\_vimrc
 -'  93  13  ~\_vimrc
--'  104  0  ~\_vimrc
+-'  4  27  D:\Dropbox\PYTHON\HMA\flaskservice\HmaGui.py
+-'  12  0  D:\Dropbox\PYTHON\HMA\service_startup.py
+-'  13  0  D:\Dropbox\PYTHON\HMA\
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable
+-'  69  39  ~\_vimrc
+-'  93  13  ~\_vimrc
+-'  1  0  ~\_vimrc
+-'  1  0  fugitive:\\D:\Dropbox\TOOLS\gVimPortable\.git\\"Data\settings\_vimrcH\Data\settings\_vimrc
+-'  46  0  ~\_vimrc
+-'  89  20  ~\_vimrc
+-'  85  18  ~\_vimrc
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  2  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  3  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  4  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+-'  1  0  D:\Dropbox\PYTHON\HMA\service_startup.py
+-'  3  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+-'  21  13  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\tagsrch.txt
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\tagsrch.txt
+-'  8  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+-'  1  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
+-'  92  20  ~\_vimrc
+-'  86  18  ~\_vimrc
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  2  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  3  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  2  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  3  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  1  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  2  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
+-'  106  0  ~\_vimrc
+-'  1  0  ~\_vimrc
 -'  12  22  D:\Dropbox\PYTHON\HMA\service_startup.py
 -'  1  0  D:\Dropbox\PYTHON\HMA\service_startup.py
 -'  11  0  D:\Dropbox\PYTHON\HMA\__Tag_List__
@@ -158,34 +185,60 @@
 -'  1  0  D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\tagsrch.txt
 -'  8  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
 -'  1  0  D:\Dropbox\PYTHON\HMA\hmaservice\DataAccess.py
--'  87  18  ~\_vimrc
--'  1  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
--'  2  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
--'  3  0  D:\Dropbox\TOOLS\gVimPortable\__Tag_List__
--'  206  32  ~\vimfiles\colors\molokai.vim
--'  182  13  ~\vimfiles\colors\molokai.vim
+-'  95  20  ~\_vimrc
 
 # History of marks within files (newest to oldest):
 
+> D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\options.txt
+	"	5382	10
+
 > D:\Dropbox\TOOLS\gVimPortable\testi.py
-	"	1	0
-	^	3	0
-	.	1	0
+	"	1	3
+	^	1	4
+	.	1	4
 	+	3	0
+	+	1	13
+	+	1	13
+	+	1	4
+
+> D:\Dropbox\TOOLS\gVimPortable\testi2.py
+	"	1	0
+	.	1	0
 	+	1	0
 
+> D:\Dropbox\PYTHON\HMA\service_startup.py
+	"	12	0
+
+> D:\Dropbox\PYTHON\HMA\flaskservice\HmaGui.py
+	"	4	27
+	^	4	28
+	.	4	27
+	+	1	4
+	+	4	27
+
+> D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\syntax\colortest.vim
+	"	50	59
+
+> D:\Dropbox\PYTHON\HMA\Highlight test
+	"	27	16
+	^	278	28
+	.	47	0
+	+	47	0
+
 > ~\vimfiles\colors\molokai.vim
-	"	206	32
-	^	206	33
-	.	206	33
+	"	17	25
+	^	118	28
+	.	118	28
 	+	77	25
 	+	209	30
 	+	206	33
+	+	111	28
+	+	118	28
 
 > ~\_vimrc
-	"	20	0
-	^	20	0
-	.	20	0
+	"	31	16
+	^	17	0
+	.	17	0
 	+	113	0
 	+	86	26
 	+	46	0
@@ -203,15 +256,13 @@
 	+	17	0
 	+	21	0
 	+	20	0
+	+	17	0
 
 > D:\Dropbox\TOOLS\gVimPortable\App\vim\vim73\doc\eval.txt
 	"	6670	47
 
 > D:\Dropbox\TOOLS\gVimPortable\.git\index
 	"	15	0
-
-> D:\Dropbox\PYTHON\HMA\service_startup.py
-	"	12	22
 
 > D:\Dropbox\PYTHON\HMA\tags
 	"	1	0
